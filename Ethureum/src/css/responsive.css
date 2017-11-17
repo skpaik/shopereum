@@ -1,0 +1,165 @@
+
+
+/* Screens Resolution : 992px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 1200px) {
+	
+	
+}
+
+/* Screens Resolution : 992px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 992px) {
+	
+	/* ---------------------------------
+	1. PRIMARY STYLES
+	--------------------------------- */
+
+	h1{ font-size: 4em; }
+	h2{ font-size: 3em; }
+	h3{ font-size: 2em; }
+	
+	
+}
+
+
+/* Screens Resolution : 767px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 767px) {
+	
+	/* ---------------------------------
+	1. PRIMARY STYLES
+	--------------------------------- */
+
+	p{ line-height: 1.4; }
+
+	h1{ font-size: 3em; }
+	h2{ font-size: 2.5em; }
+	h3{ font-size: 1.8em; }
+	h4{ font-size: 1.5em; }
+	h5{ font-size: 1.2em; }
+
+	
+	/* ---------------------------------
+	2. COMMON SYLES
+	--------------------------------- */
+
+	.section{ padding: 100px 0 50px; }
+
+	.section .left-heading-area,
+	.section .heading-area{ text-align: center; position: relative; padding-bottom: 25px; margin-bottom: 75px; }
+	
+	.section .left-heading-area:after,
+	.section .heading-area:after{ content:''; position: absolute; bottom: 0; left: 50%; width: 100px; margin-left: -50px; 
+		height: 2px; opacity: .7; background: #0081C3; }
+	
+
+
+	
+	/* ---------------------------------
+	3. MENU STYLING
+	--------------------------------- */
+
+	.fixed-menu{ position: absolute!important; }
+	
+	
+	/* UPPER AREA */
+	
+	header .upper-area{ display: none; }
+	
+	
+	/* MAIN MENU */
+
+	.main-menu{ float: none; position: absolute; top: 60px; left: 0; right: 0; overflow: auto; text-align: left; 
+		padding: 25px 0; transform: translate3d(-100%, 0 ,0); transition: all .4s ease-out; background: #222; }
+	
+	.main-menu ul.nav-menu> li{ display: block; }
+	
+	.main-menu ul.nav-menu> li> a{ display: block; line-height: 40px; border-top: 1px solid #444; }
+	
+	.main-menu ul.nav-menu> li:first-child > a{ border-top: 0px; }
+	
+	.main-menu.open{ transform: translate3d(0,0,0); }
+	
+	
+	/* SEARCH AREA */
+
+	.main-menu .nav-menu{ display: block; }
+
+	.main-menu .search-area{ display: none!important; }
+	
+	
+	
+	/* DROPDOWN */
+
+	.drop-down-menu,
+	.drop-down-menu.submenu{ position: static; width: 100%; background: none; box-shadow: none; }
+	
+	.drop-down-menu li > a{ border-top: 0; }
+	
+	.drop-down-menu li > a:hover{ background: none; color: #000; }
+	
+	.main-menu ul.nav-menu li.drop-down .nv-icn{ margin-left: 5px; }
+	
+	
+	
+	/* TOGGLE CAKE ICON */
+	
+	.nav-icon{ display: block; float: right; }
+	
+	
+	/* CAROUSEL CONTROLS */
+
+	.slider-control{ width: 70px; }
+	
+	.slider-control .prev .left-arrow{ left: 5px; right: 8px;  }
+	
+	.slider-control .next .right-arrow{ left: 8px; right: 5px; }	
+
+	.carousel-indicators { bottom: 25px; left: 20px; width: 60%; margin-left: 0; text-align: left; }
+
+	
+	
+	/* ---------------------------------
+	10. QUOTO AREA
+	--------------------------------- */
+
+	.quoto{ display: block; }
+	
+	.quoto .quoto-img{ margin: 0 auto; display: block; text-align: center; }
+
+	.main-quoto{ padding-left: 0px; padding-top: 40px; }
+
+	
+	
+}
+
+/* Screens Resolution : 479px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 479px) {
+
+	/* ---------------------------------
+	1. PRIMARY STYLES
+	--------------------------------- */
+
+	body{ font-size: 14px;  }
+	
+	
+	
+}
+
+/* Screens Resolution : 359px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 359px) {
+	
+	
+}
+
+/* Screens Resolution : 290px
+-------------------------------------------------------------------------- */
+@media only screen and (max-width: 290px) {
+	
+	/* LOGO */
+	
+	
+}

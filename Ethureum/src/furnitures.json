@@ -1,0 +1,38 @@
+[
+  {
+    "id": 0,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-1-400x600.png",
+    "quantity": 3
+  },
+  {
+    "id": 1,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-2-400x600.png",
+    "quantity": 3
+  },
+  {
+    "id": 2,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-3-400x600.png",
+    "quantity": 3
+  },
+  {
+    "id": 3,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-4-400x600.png",
+    "quantity": 3
+  },
+  {
+    "id": 4,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-5-400x600.png",
+    "quantity": 3
+  },
+  {
+    "id": 5,
+    "name": "Brown Wood Chair",
+    "picture": "images/product-5-400x600.png",
+    "quantity": 3
+  }
+]
