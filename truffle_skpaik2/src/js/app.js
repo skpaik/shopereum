@@ -4,17 +4,20 @@ App = {
 
   init: function() {
     // Load pets.
-    $.getJSON('../pets.json', function(data) {
+    $.getJSON('../pets3.json', function(data) {
       var petsRow = $('#petsRow');
       var petTemplate = $('#petTemplate');
 
       for (i = 0; i < data.length; i ++) {
-        petTemplate.find('.panel-title').text(data[i].name);
-        petTemplate.find('img').attr('src', data[i].picture);
-        petTemplate.find('.pet-breed').text(data[i].breed);
-        petTemplate.find('.pet-age').text(data[i].age);
-        petTemplate.find('.pet-location').text(data[i].location);
-        petTemplate.find('.btn-adopt').attr('data-id', data[i].id);
+var each_data=data[i];
+
+console.log(each_data);
+        petTemplate.find('.panel-title').text(each_data.name);
+        petTemplate.find('img').attr('src', each_data.picture);
+        petTemplate.find('.pet-breed').text(each_data.breed);
+        petTemplate.find('.pet-age').text(each_data.age);
+        petTemplate.find('.pet-location').text(each_data.location);
+        petTemplate.find('.btn-adopt').attr('data-id', each_data.id);
 
         petsRow.append(petTemplate.html());
       }
