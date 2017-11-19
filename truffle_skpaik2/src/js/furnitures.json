@@ -7,31 +7,31 @@
   },
   {
     "id": 1,
-    "name": "Brown Wood Chair",
+    "name": "Red Wood Chair",
     "picture": "images/product-2-400x600.png",
     "quantity": 3
   },
   {
     "id": 2,
-    "name": "Brown Wood Chair",
+    "name": "Brown Chair",
     "picture": "images/product-3-400x600.png",
     "quantity": 3
   },
   {
     "id": 3,
-    "name": "Brown Wood Chair",
+    "name": "Blue Wood Chair",
     "picture": "images/product-4-400x600.png",
     "quantity": 3
   },
   {
     "id": 4,
-    "name": "Brown Wood Chair",
+    "name": "Wood Chair",
     "picture": "images/product-5-400x600.png",
     "quantity": 3
   },
   {
     "id": 5,
-    "name": "Brown Wood Chair",
+    "name": "Green Chair",
     "picture": "images/product-5-400x600.png",
     "quantity": 3
   }

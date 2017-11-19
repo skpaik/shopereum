@@ -66,7 +66,7 @@ App = {
   }).then(function(adopters) {
     for (i = 0; i < adopters.length; i++) {
       if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
-        $('.panel-action').eq(i).css('display', 'none');
+        $('.panel-action').eq(i).find('button').text('Success').attr('disabled', true);
       }
     }
   }).catch(function(err) {
@@ -103,7 +103,7 @@ App = {
 };
 
 $(function() {
-  $(window).on('load',function() {
+  $(window).load(function() {
     App.init();
   });
 });
