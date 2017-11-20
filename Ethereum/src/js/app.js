@@ -7,30 +7,32 @@ App = {
         $.getJSON('../furnitures.json', function (data) {
             for (i = 0; i < data.length; i++) {
                 var each_data = data[i];
-                console.log(each_data);
-                var id = each_data.id;
-                App.data_list.push({id: each_data});
+
+                App.data_list[each_data.id]=each_data;
             }
+
+            var petsRow = $('#petsRow2');
+            var petTemplate = $('#petTemplate2');
+
+
+            App.data_list.forEach(function (each_data) {
+              //each_data=json.parse(each_data);
+                //console.log(each_data);
+
+                petTemplate.find('.title').text(each_data.name);
+                petTemplate.find('img').attr('src', each_data.picture);
+                petTemplate.find('.product-price').text(each_data.price + "$");
+                petTemplate.find('.product-quantity').text(" (" + each_data.quantity + " available)");
+                petTemplate.find('.btn-add-to-cart').attr('data-id', each_data.id);
+                petTemplate.find('.btn-buy').attr('data-id', each_data.id);
+
+                petsRow.append(petTemplate.html());
+            });
         });
 
-        var petsRow = $('#petsRow2');
-        var petTemplate = $('#petTemplate2');
 
-
-        App.data_list.forEach(function (each_data) {
-            console.log(each_data);
-
-            petTemplate.find('.title').text(each_data.name);
-            petTemplate.find('img').attr('src', each_data.picture);
-            petTemplate.find('.product-price').text(each_data.price + "$");
-            petTemplate.find('.product-quantity').text(" (" + each_data.quantity + " available)");
-            petTemplate.find('.btn-add-to-cart').attr('data-id', each_data.id);
-            petTemplate.find('.btn-buy').attr('data-id', each_data.id);
-
-            petsRow.append(petTemplate.html());
-        });
-
-
+        App.saveItem();
+        console.log(App.getItem());
         return App.initWeb3();
     },
     initWeb3: function () {
@@ -109,6 +111,15 @@ App = {
                 console.log(err.message);
             });
         });
+    },
+    saveItem:function(){
+      console.log(App.data_list);
+      var string_data=JSON.stringify(App.data_list);
+console.log(string_data);
+      localStorage.setItem('keyPair', App.data_list);
+    },
+    getItem:function () {
+      return localStorage.getItem('keyPair');
     }
 };
 
