@@ -8,14 +8,14 @@
   },
   {
     "id": 1,
-    "name": "Red Wood Chair",
+    "name": "Wood Bed",
     "picture": "images/product-2-400x600.png",
     "quantity": 4,
     "price": 25
   },
   {
     "id": 2,
-    "name": "Brown Chair",
+    "name": "Steel Bed",
     "picture": "images/product-3-400x600.png",
     "quantity": 5,
     "price": 26
@@ -29,16 +29,9 @@
   },
   {
     "id": 4,
-    "name": "Wood Chair",
+    "name": "Steel Corner Sofa",
     "picture": "images/product-5-400x600.png",
     "quantity": 7,
     "price": 28
-  },
-  {
-    "id": 5,
-    "name": "Green Chair",
-    "picture": "images/product-5-400x600.png",
-    "quantity": 8,
-    "price": 29
   }
 ]

@@ -8,31 +8,26 @@ App = {
             for (i = 0; i < data.length; i++) {
                 var each_data = data[i];
 
-                App.data_list[each_data.id]=each_data;
+                App.data_list[each_data.id] = each_data;
             }
 
-            var petsRow = $('#petsRow2');
-            var petTemplate = $('#petTemplate2');
-
+            var productRow = $('#productRow');
+            var productTemplate = $('#productTemplate');
 
             App.data_list.forEach(function (each_data) {
-              //each_data=json.parse(each_data);
-                //console.log(each_data);
+                productTemplate.find('.title').text(each_data.name);
+                productTemplate.find('img').attr('src', each_data.picture);
+                productTemplate.find('.product-price').text(each_data.price + "$");
+                productTemplate.find('.product-quantity').text(" (" + each_data.quantity + " available)");
+                productTemplate.find('.btn-add-to-cart').attr('data-id', each_data.id);
+                productTemplate.find('.btn-buy').attr('data-id', each_data.id);
 
-                petTemplate.find('.title').text(each_data.name);
-                petTemplate.find('img').attr('src', each_data.picture);
-                petTemplate.find('.product-price').text(each_data.price + "$");
-                petTemplate.find('.product-quantity').text(" (" + each_data.quantity + " available)");
-                petTemplate.find('.btn-add-to-cart').attr('data-id', each_data.id);
-                petTemplate.find('.btn-buy').attr('data-id', each_data.id);
-
-                petsRow.append(petTemplate.html());
+                productRow.append(productTemplate.html());
             });
         });
 
-
-        App.saveItem();
-        console.log(App.getItem());
+        //App.saveItem();
+        //console.log(App.getItem());
         return App.initWeb3();
     },
     initWeb3: function () {
@@ -49,35 +44,35 @@ App = {
     },
 
     initContract: function () {
-        $.getJSON('Adoption.json', function (data) {
+        $.getJSON('Product.json', function (data) {
             // Get the necessary contract artifact file and instantiate it with truffle-contract
-            var AdoptionArtifact = data;
-            App.contracts.Adoption = TruffleContract(AdoptionArtifact);
+            var ProductArtifact = data;
+            App.contracts.Product = TruffleContract(ProductArtifact);
 
             // Set the provider for our contract
-            App.contracts.Adoption.setProvider(App.web3Provider);
+            App.contracts.Product.setProvider(App.web3Provider);
 
-            // Use our contract to retrieve and mark the adopted pets
-            return App.markAdopted();
+            // Use our contract to retrieve and mark the buy product
+            return App.markSoled();
         });
 
         return App.bindEvents();
     },
 
     bindEvents: function () {
-        $(document).on('click', '.btn-buy', App.handleAdopt);
+        $(document).on('click', '.btn-buy', App.handleBuy);
     },
 
-    markAdopted: function (adopters, account) {
-        var adoptionInstance;
+    markSoled: function (products, account) {
+        var productInstance;
 
-        App.contracts.Adoption.deployed().then(function (instance) {
-            adoptionInstance = instance;
+        App.contracts.Product.deployed().then(function (instance) {
+            productInstance = instance;
 
-            return adoptionInstance.getAdopters.call();
-        }).then(function (adopters) {
-            for (i = 0; i < adopters.length; i++) {
-                if (adopters[i] !== '0x0000000000000000000000000000000000000000') {
+            return productInstance.getProducts.call();
+        }).then(function (products) {
+            for (i = 0; i < products.length; i++) {
+                if (products[i] !== '0x0000000000000000000000000000000000000000') {
                     $('.panel-action').eq(i).css('display', 'none');
                 }
             }
@@ -86,12 +81,12 @@ App = {
         });
     },
 
-    handleAdopt: function (event) {
+    handleBuy: function (event) {
         event.preventDefault();
 
-        var petId = parseInt($(event.target).data('id'));
+        var productId = parseInt($(event.target).data('id'));
 
-        var adoptionInstance;
+        var productInstance;
 
         web3.eth.getAccounts(function (error, accounts) {
             if (error) {
@@ -100,26 +95,26 @@ App = {
 
             var account = accounts[0];
 
-            App.contracts.Adoption.deployed().then(function (instance) {
-                adoptionInstance = instance;
+            App.contracts.Product.deployed().then(function (instance) {
+                productInstance = instance;
 
-                // Execute adopt as a transaction by sending account
-                return adoptionInstance.adopt(petId, {from: account});
+                // Execute buy as a transaction by sending account
+                return productInstance.buy(productId, {from: account});
             }).then(function (result) {
-                return App.markAdopted();
+                return App.markSoled();
             }).catch(function (err) {
                 console.log(err.message);
             });
         });
     },
-    saveItem:function(){
-      console.log(App.data_list);
-      var string_data=JSON.stringify(App.data_list);
-console.log(string_data);
-      localStorage.setItem('keyPair', App.data_list);
+    saveItem: function () {
+        console.log(App.data_list);
+        var string_data = JSON.stringify(App.data_list);
+        console.log(string_data);
+        localStorage.setItem('keyPair', App.data_list);
     },
-    getItem:function () {
-      return localStorage.getItem('keyPair');
+    getItem: function () {
+        return localStorage.getItem('keyPair');
     }
 };
 
