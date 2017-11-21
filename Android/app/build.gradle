@@ -1,0 +1,177 @@
+apply plugin: "com.android.application"
+apply from: "../config/quality/quality.gradle"
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven {
+        url "http://research.rightmesh.io/artifactory/libs-local"
+        credentials {
+            username artifactory_app_username
+            password artifactory_app_password
+        }
+    }
+}
+
+buildscript {
+    repositories {
+        maven {
+            url "http://research.rightmesh.io/artifactory/libs-local"
+            credentials {
+                username artifactory_app_username
+                password artifactory_app_password
+            }
+        }
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath 'io.left.rightmesh:rightmesh-plugin:1.2'
+    }
+}
+
+//apply plugin: 'com.android.library'
+apply plugin: 'io.left.rightmesh.rightmesh-plugin'
+
+preBuild.dependsOn("rightmesh")
+
+configurations.all {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        applicationId "io.left.core.flare"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        multiDexEnabled true
+        renderscriptTargetApi 18
+        renderscriptSupportModeEnabled true
+        setProperty("archivesBaseName", "Flare-$versionName")
+
+        vectorDrawables.useSupportLibrary = true
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        debug {
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude "META-INF/LICENSE.txt"
+        exclude "META-INF/NOTICE.txt"
+        exclude "META-INF/INDEX.LIST"
+        exclude "META-INF/io.netty.versions.properties"
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    configurations.all {
+        resolutionStrategy.force "com.android.support:support-annotations:$supportLibraryVersion"
+        resolutionStrategy.force "com.google.code.findbugs:jsr305:1.3.9"
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+        maven {
+            url "https://maven.google.com/"
+            name "Google"
+        }
+    }
+
+    tasks.withType(JavaCompile) {
+        sourceCompatibility = 1.7
+        targetCompatibility = 1.7
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    // android support libraries
+    compile "com.android.support:appcompat-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:recyclerview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:cardview-v7:$rootProject.supportLibraryVersion"
+    compile "com.android.support:design:$rootProject.supportLibraryVersion"
+    compile "com.android.support:support-vector-drawable:$rootProject.supportLibraryVersion"
+    compile "com.android.support:animated-vector-drawable:$rootProject.supportLibraryVersion"
+    compile "com.android.support.constraint:constraint-layout:+"
+    compile "com.android.support:multidex:1.0.1"
+}
+
+dependencies {
+    // reactive
+    compile "io.reactivex.rxjava2:rxjava:$rootProject.rxjava2Version"
+    compile "io.reactivex.rxjava2:rxandroid:$rootProject.rxandroidVersion"
+
+    //room
+    compile "android.arch.persistence.room:runtime:$rootProject.room"
+    annotationProcessor "android.arch.persistence.room:compiler:$rootProject.room"
+    compile "android.arch.persistence.room:rxjava2:$rootProject.room"
+
+    //Architectural component
+    compile "android.arch.lifecycle:extensions:$rootProject.architectureComponentsLifecycleVersion"
+
+    //third party dependencies -------------------------------------------------------------------
+    compile "com.roughike:bottom-bar:2.2.0"// Bottom bar nav
+    compile "com.mikhaellopez:circularimageview:3.0.2"// circle image view
+    compile "com.google.code.gson:gson:2.8.0"
+    compile "com.github.bumptech.glide:glide:3.7.0"//Old Version 4.2.0
+    compile "jp.wasabeef:glide-transformations:2.0.1"
+    compile "com.makeramen:roundedimageview:2.3.0"
+    compile "org.osmdroid:osmdroid-android:4.3"
+
+    compile "org.osmdroid:osmdroid-android:4.3"
+
+    //debug only
+    debugCompile "com.facebook.stetho:stetho:1.5.0"
+
+    //osmdroid map
+    compile "org.osmdroid:osmdroid-android:4.3"
+
+    //Dependency on other module
+    //compile project(path: ':meshlibrary')
+}
+
+dependencies {
+    // test
+    testCompile "junit:junit:4.12"
+    testCompile "org.mockito:mockito-core:2.11.0"
+
+    androidTestCompile "com.android.support.test:runner:$rootProject.runnerVersion"
+    //compile "com.android.support.test:runner:1.0.1"
+    compile "com.android.support.test:rules:1.0.1"
+    compile "com.android.support.test.espresso:espresso-core:3.0.1"
+}
+
+dependencies {
+    compile('io.left.rightmesh:rightmesh-library-dev:0.3.1@aar') {
+        changing = true; transitive = true;
+    }
+}

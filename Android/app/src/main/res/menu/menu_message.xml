@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+        android:id="@+id/menu_map"
+        android:title="@string/map_only"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_map_green"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menu_contacts"
+        android:title="@string/add_contacts"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+
+
+    <item
+        android:id="@+id/menu_location_profile"
+        android:title="@string/location_profile"
+        android:orderInCategory="101"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_block"
+        android:title="@string/block_message"
+        android:orderInCategory="102"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_delete"
+        android:title="@string/delete_conversation"
+        android:orderInCategory="103"
+        app:showAsAction="never" />
+
+</menu>

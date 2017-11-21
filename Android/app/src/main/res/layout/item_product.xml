@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="io.left.core.utils.helper.BindUtils" />
+
+        <variable
+            name="product"
+            type="io.left.core.flare.data.local.HomeItems" />
+
+        <variable
+            name="homePresenter"
+            type="io.left.core.flare.ui.homepage.HomePresenter" />
+    </data>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="7dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="3dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/image_product"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@{product}" />
+
+            <TextView
+                android:id="@+id/text_product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_product"
+                android:layout_marginTop="10dp"
+                android:layout_toLeftOf="@+id/text_product_slash"
+                android:text="@{product.itemPrice}"
+                android:textColor="@color/black"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_product_slash"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_product"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:text=" / "
+                android:textColor="@color/gray"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_product_ammount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/image_product"
+                android:layout_marginTop="10dp"
+                android:layout_toRightOf="@+id/text_product_slash"
+                android:text=""
+                android:textColor="@color/gray"
+                android:textSize="13dp"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/text_product_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_product_price"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="@{product.itemName}"
+                android:textColor="@color/gray"
+                android:textSize="18dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_product_name"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="8dp"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/button_add_to_chart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="3dp"
+                    android:background="@drawable/add_to_chirt" />
+
+                <Button
+                    android:id="@+id/button_add_to_fab"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="3dp"
+                    android:layout_toRightOf="@+id/button_add_to_chart"
+                    android:background="@drawable/money" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</layout>

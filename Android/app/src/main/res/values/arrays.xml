@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="people_names">
+        <item>Anderson Thomas</item>
+        <item>Adams Green</item>
+        <item>Laura Michelle</item>
+        <item>Betty L</item>
+        <item>Miller Wilson</item>
+
+        <item>Garcia Lewis</item>
+        <item>Roberts Turner</item>
+        <item>Mary Jackson</item>
+        <item>Sarah Scott</item>
+        <item>Kevin John</item>
+
+        <item>Elizabeth</item>
+        <item>Evans Collins</item>
+    </string-array>
+
+    <string-array name="people_descriptions">
+        <item>A small cake designed to serve one person, which may be baked in a small thin paper or aluminum cup. As with larger cakes, icing and other cake decorations, such as candy, may be applied.</item>
+        <item>A type of fried dough confectionery or dessert food.</item>
+        <item>An oblong pastry made with choux dough filled with a cream and topped with icing.</item>
+        <item>Frozen yogurt is a frozen dessert made with yogurt and sometimes other dairy products. It is usually more tart than ice cream, as well as being lower in fat. It is different from ice milk and conventional soft serve.</item>
+        <item>Refers to a broad category of baked goods, typically flavored with ginger, cloves, nutmeg or cinnamon and sweetened with honey, sugar or molasses.</item>
+        <item>A mass of hexagonal wax cells built by honey bees in their nests to contain their larvae and stores of honey and pollen. Beekeepers may remove the entire honeycomb to harvest honey.</item>
+        <item>A frozen dessert consisting of ice cream between two wafers, cookies, or other similar biscuit.</item>
+        <item>Small bean-shaped sugar candies with soft candy shells and thick gel interiors. The confection comes in a wide variety of colors and flavors.</item>
+        <item>A chocolate-covered wafer bar confection created by Rowntree of York, England, and is now produced globally by Nestle.</item>
+        <item>A type of confectionery consisting of a sweetmeat of hard candy or water-ice mounted on a stick and intended for sucking or licking. Different informal terms are used in different places, including lolly, sucker, sticky-pop, etc.</item>
+        <item>A sugar-based confection that, in its modern form, typically consists of sugar, water and gelatin which is whipped to a spongy consistency, molded into small cylindrical pieces, and coated with corn starch.</item>
+        <item>A family of confections made with sugar or honey, roasted nuts, whipped egg whites, and sometimes chopped candied fruit. The consistency of nougat is chewy, and it is used in a variety of candy bars and chocolates.</item>
+    </string-array>
+
+    <string-array name="people_seenTxt">
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+        <item>Seen at October 3, 4.15pm</item>
+    </string-array>
+    <string-array name="user_default_status">
+        <item>I can help others</item>
+        <item>I am First Aid Certified</item>
+        <item>I need urgent help</item>
+        <item>I need help</item>
+        <item>I\'m safe</item>
+    </string-array>
+
+
+</resources>

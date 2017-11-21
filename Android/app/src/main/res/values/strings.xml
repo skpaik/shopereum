@@ -1,0 +1,231 @@
+<!--
+  ~ Copyright (C) 2017 MINDORKS NEXTGEN PRIVATE LIMITED
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     https://mindorks.com/license/apache-v2
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distribuprocessd on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License
+  -->
+
+<resources>
+    <string name="app_name">Shopereum</string>
+
+    <!--Toolbar menus-->
+    <string name="clear">Clear</string>
+    <string name="cut">Cut</string>
+    <string name="copy">Copy</string>
+    <string name="paste">Paste</string>
+    <string name="delete">Delete</string>
+    <string name="share">Share</string>
+
+    <!--Drawer-->
+    <string name="open_drawer">Drawer Open</string>
+    <string name="close_drawer">Drawer Close</string>
+
+    <!--Drawer Menus-->
+    <string name="about">About</string>
+    <string name="logout">Logout</string>
+    <string name="feed">My Feed</string>
+
+    <!--FlareApplication Message-->
+    <string name="api_retry_error">Please retry!</string>
+    <string name="api_default_error">Something wrong happened!</string>
+    <string name="some_error">Some Error Occurred!</string>
+    <string name="connection_error">Internet connection lost!</string>
+
+    <!--Login-->
+    <string name="login_dummy">Login Dummy</string>
+    <string name="login">Login</string>
+    <string name="contactId">Email</string>
+    <string name="password">Password</string>
+
+    <!--Login Validation-->
+    <string name="empty_email">Please provide a non empty contactId.</string>
+    <string name="invalid_email">Please provide a valid contactId.</string>
+    <string name="empty_password">Please provide a non empty password.</string>
+
+    <!--about fragment-->
+    <string name="project_info">This sample app implements MVP architecture using Dagger2, GreenDao, RxJava, FastAndroidNetworking and PlaceholderView</string>
+    <string name="link_mvp_blog">1. https://blog.mindorks.com</string>
+    <string name="link_mvp_repo">2. https://github.com/MindorksOpenSource/android-mvp-architecture</string>
+    <string name="link_mindorks_blog">3. https://blog.mindorks.com</string>
+    <string name="link_mindorks_repo">4. https://github.com/MindorksOpenSource</string>
+    <string name="version">"version"</string>
+
+    <!--rating dialog-->
+    <string name="rate_us">Rate Us</string>
+    <string name="rating_message">Please let us know, how can we improve ourselves?</string>
+    <string name="rating_play_store_redirect_message_line_1">Awesome! Thank you for the 5 stars.</string>
+    <string name="rating_play_store_redirect_message_line_2">Please help others, in knowing some good things about this app.</string>
+    <string name="rating_play_store_text">Rate us on Play Store</string>
+    <string name="rating_not_provided_error">Please provide us stars.</string>
+    <string name="rating_thanks">Thank you!</string>
+
+    <!--play store-->
+    <string name="app_google_play_store_link">"https://play.google.com/store/apps/details?id="</string>
+    <string name="app_market_link">"market://details?id="</string>
+
+    <!--button-->
+    <string name="later">Later</string>
+    <string name="submit">Submit</string>
+
+    <!--feed-->
+    <string name="title">My Feed</string>
+    <string name="open_source">Open Source</string>
+    <string name="blog">Blog</string>
+
+    <!--empty state-->
+    <string name="empty_screen">We do not have anything\nhere right now.</string>
+    <string name="please_retry">Please Retry</string>
+    <string name="retry">Retry</string>
+
+    <string name="invitation_search_hint">Type phone number, name or email address</string>
+    <string name="invite">Invite</string>
+    <string name="invited">Invited</string>
+
+    <!--login-->
+    <string name="make_easy">Don\'t stress, this can be updated at anytime.</string>
+    <string name="user_name">Username</string>
+
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <!--Profile -->
+    <string name="send_message">Send message</string>
+    <string name="last_location">View last known location</string>
+    <string name="notify_me">Notify me when this person comes in and out of range</string>
+    <string name="mute_message">Message notification</string>
+    <string name="mute_message_subtext">Be notified of new messages from this person.</string>
+    <string name="block_message">Block</string>
+    <string name="all_notifications">All notifications</string>
+    <string name="in_range_notifications">In range notification</string>
+    <string name="in_range_notifications_subtext">Be notified when this person is in range.</string>
+    <string name="out_of_range_notifications">Out of range notification</string>
+    <string name="out_of_range_notifications_subtext">Be notified when this person is no longer in range.</string>
+    <string name="status_changes">Status changes</string>
+    <string name="status_changes_subtext">Be notified when this person updates their status</string>
+    <string name="remove_from_contact">Remove from Contacts</string>
+
+
+    <string name="status_01">I\'m safe</string>
+    <string name="status_02">I need help</string>
+    <string name="status_03">I need urgent help</string>
+    <string name="status_04">I am First Aid Certified</string>
+    <string name="status_05">I can help others</string>
+    <!--Aziz-->
+    <string name="known_friend_header">My contact</string>
+    <string name="unknown_friend_header">All contacts</string>
+
+
+    <string name="policy_txt">Privacy Policy</string>
+    <string name="terms_txt">Terms of Service</string>
+
+    <string name="rightMeshLibraryVersion">0.3.1</string>
+
+    <string name="remove_contact">Remove Contact</string>
+    <string name="current_location">Location</string>
+    <string name="update_time">Updated at 3.12pm</string>
+    <string name="lat_long_txt">49.277220, -122.8461678</string>
+    <string name="address_profile">2936 St Andrews St, Port Moody</string>
+
+    <string name="invites_contacts">Invite contacts</string>
+    <string name="set_your_status">Set your status</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="in_range">In range</string>
+    <string name="in_range_out"> | Out of range</string>
+    <string name="out_of_range">Out of range</string>
+    <string name="block">Block</string>
+    <string name="un_block">Unblock</string>
+    <string name="user_distance"> metres away</string>
+
+    <string name="invitation_message">Hey, I\'ve just discovered this new app called Flare.</string>
+
+    <string name="messages_only">Messages</string>
+    <string name="in_range_only">In Range</string>
+    <string name="contacts_only">Contacts</string>
+    <string name="flare_only">Flare</string>
+
+    <!--Flare Tab Screen -->
+    <string name="send_emergency_flare">Send an Emergency Flare</string>
+    <string name="send_emergency_flare_subtext">Everyone is In Range will receive an alert that you need critical help with your location.</string>
+    <string name="send_a_text_flare">Send a Test Flare</string>
+    <string name="update_status">Update your Status</string>
+    <string name="to_let_others">to let others know about no-emergency situations.</string>
+    <string name="sent_message_text">Your Emergency Flare will be sent in</string>
+
+    <string name="mesh_network_name">Bytecode</string>
+    <string name="send_now">Send Now</string>
+    <string name="cancel_flare">Cancel Flare</string>
+
+    <string name="default_status">I\'m fine</string>
+
+    <string name="last_updated">Updated</string>
+    <string name="just_now"> just now</string>
+    <string name="hour_ago"> hour ago</string>
+    <string name="hours_ago"> hours ago</string>
+    <string name="mins_ago"> minutes ago</string>
+    <string name="days_ago"> days ago</string>
+
+    <!--Errors-->
+    <string name="error_invalid_username">Enter valid username</string>
+    <string name="error_minimum_two_char_username">"Username requires minimum 2 characters</string>
+    <string name="error_special_case">Do not use special case</string>
+    <string name="unread_messages">Unread Messages</string>
+    <string name="mark_as_read">Mark as read</string>
+    <string name="reply_only">Reply</string>
+    <string name="map_tiles_not_available">Map tiles are not available, need to connect internet.</string>
+
+    <!--Activity Titles-->
+    <string name="title_new_message">New Message</string>
+
+    <!--Text Views-->
+    <string name="text_group_message">Group message</string>
+
+    <!--Message Content-->
+    <string name="map_only">Map</string>
+    <string name="add_contacts">Add to Contacts</string>
+    <string name="remove_contacts">Remove Contacts</string>
+    <string name="location_profile">Location &amp; profile</string>
+    <!--Location Sharing-->
+    <string name="off_only">Off</string>
+    <string name="turn_off_locations">Turn on Location Sharing to allow others to find you.</string>
+    <string name="your_current_location">Your current location</string>
+
+    <string name="location_sharing">Location sharing</string>
+
+
+    <string name="address_only">Address</string>
+    <string name="coordinates_only">Coordinates : </string>
+    <string name="splitter_semicolon">, </string>
+    <string name="splitter_space">  \u0020 </string>
+    <string name="location_not_found">Location Not Found </string>
+    <string name="noise">Noise</string>
+
+    <string name="location_enable">Enable Location</string>
+    <string name="on_only">ON</string>
+
+    <string name="share_location">Share this Location</string>
+    <string name="approx_address">Approx. Address :</string>
+    <string name="share_location_title">Share location</string>
+
+    <string name="location_sharing_on">Location sharing ON</string>
+    <string name="location_sharing_off">Location sharing OFF</string>
+
+
+    <string name="delete_conversation">Delete Conversation</string>
+    <string name="pending">Pending… Tap for more info.</string>
+    <string name="failed">Failed to send. Tap to retry</string>
+    <string name="sending">Sending…</string>
+    <string name="delievery">Delivered at</string>
+
+    <string name="user_out_of_range">is currently out of range.</string>
+
+    <string name="user_out_of_range_msg">You can still send messages, they will be marked as Pending until this person is in Range.</string>
+
+</resources>

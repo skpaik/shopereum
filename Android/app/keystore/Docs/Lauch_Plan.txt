@@ -1,0 +1,16 @@
+Feedback from Jenna:
+Date: 2017-10-30
+----------------------------------------
+Some quick updates here on the project:
+
+Flare – requirements
+•    We have some design updates that have been added to invision for you guys to looks at. As part of this, Laura and I are commenting explanations of the designs directly onto the screenshots, so we can discuss the prototypes in this fashion.
+•    Have started applying the brand colours to the wireframe, have yet to finish making a logo. Logo is a lower priority than a branded wireframe – we know the colour palette that will be used in the brand so this will not change. A logo will really only be seen in the app on the splash screen and on the app icon.
+
+Flare Timeline  (pretty high level – let’s talk about this in the call)
+1.    Design team provides high fidelity wireframe for November 10 (still on track for this)
+2.    December 22 (before Christmas holiday in Canada) – Complete Alpha version of the app. At this point, we should have an app version that we can use INTERNALLY.
+3.    January/February – TESTING, TESTING, and MORE TESTING. Because this is will be a publicly launched app, and people will be relying on it in emergency situations, this is our time to get things Right. So, this time frame will be dedicated to testing and fixing the app, testing the RightMesh platform, and running qualitative user tests and making tweaks. We’ll need to put together a test plan for this.
+4.    March – Launch. The reason a public launch is delayed until that, as opposed to what we previously talked about is that autonomous role switching is a mandatory component for a widespread launch. It is asking far too much for users on a day to day basis to have to make adjustments to their settings constantly in order to connect – especially in an emergency situation
+
+That’s it. As mentioned, save your questions for the call!

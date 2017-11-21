@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_in_range"
+        icon="@drawable/ic_in_range"
+        title="In Range" />
+
+    <tab
+        id="@+id/tab_friends"
+        icon="@drawable/ic_flare_tab"
+        title="Flare" />
+
+    <tab
+        id="@+id/tab_favorites"
+        icon="@drawable/ic_message"
+        title="Messages" />
+
+</tabs>
